@@ -3,7 +3,7 @@ Code ran to add pub and private keys to get one set closer to getting ride of pa
 
 # 1 Gen the key pair Using thee ed25519 algo and a space to label the keys
 
-ssh-keygen -t ed25519 -c "your-label-here"
+ssh-keygen -t ed25519 -C "your-label-here"
 
 # (pressed Enter to accept default save location, set a passphrase when prompted)
 
@@ -18,7 +18,7 @@ ssh vboxuser@192.168.1.24
 
 # 4 tkaing away password authentiction and adding key auth 
 
-sudo nano etc/ssh/sshd_config 
+sudo nano /etc/ssh/sshd_config 
 PasswordAuthentication no
 PubkeyAuthentication yes 
 
